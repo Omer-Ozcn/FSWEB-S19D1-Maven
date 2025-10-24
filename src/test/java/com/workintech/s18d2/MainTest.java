@@ -1,5 +1,7 @@
 package com.workintech.s18d2;
 
+import com.workintech.s18d2.entity.Fruit;
+import com.workintech.s18d2.entity.FruitType;
 import com.workintech.s18d2.entity.Vegetable;
 import com.workintech.s18d2.exceptions.PlantException;
 import com.workintech.s18d2.repository.FruitRepository;

@@ -1,26 +1,27 @@
-package com.workintech.s18d2;
+package com.workintech.s18d2.entity;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 @Entity
 @Table(name = "fruit", schema = "fsweb")
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
 public class Fruit {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
+    @Column(name = "name")
     private String name;
 
-    @Column(nullable = false)
+    @Column(name = "price")
     private Double price;
 
+    @Column(name = "fruit_type")
     @Enumerated(EnumType.STRING)
-    @Column(name = "fruit_type", nullable = false)
     private FruitType fruitType;
 }
